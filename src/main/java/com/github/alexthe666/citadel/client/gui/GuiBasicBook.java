@@ -161,7 +161,7 @@ public abstract class GuiBasicBook extends Screen {
         quaternion.mul(Axis.ZP.rotationDegrees((float) zRot));
         guiGraphics.pose().mulPose(quaternion);
 
-        Lighting.setupForEntityInInventory(quaternion);
+        Lighting.setupForEntityInInventory();
         EntityRenderDispatcher entityrenderdispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
         quaternion1.conjugate();
         entityrenderdispatcher.overrideCameraOrientation(quaternion1);
