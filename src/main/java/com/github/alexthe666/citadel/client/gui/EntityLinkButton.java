@@ -88,8 +88,8 @@ public class EntityLinkButton extends Button {
         guiGraphics.pose().mulPose((new Matrix4f()).scaling(scale, scale,  (-scale)));
         guiGraphics.pose().mulPose(rotation);
 
-        Vector3f light0 = new Vector3f(1, -1.0F, -1.0F).normalize();
-        Vector3f light1 = new Vector3f(-1, 1.0F, 1.0F).normalize();
+        Vector3f light0 = new Vector3f(1.0F, -1.0F, 1.0F).normalize();
+        Vector3f light1 = new Vector3f(-1.0F, -1.0F, 0.0F).normalize();
         RenderSystem.setShaderLights(light0, light1);
         EntityRenderDispatcher entityrenderdispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
         entityrenderdispatcher.setRenderShadow(false);
